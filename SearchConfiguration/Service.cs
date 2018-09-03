@@ -228,11 +228,11 @@ namespace SearchConfiguration
     class ArticleIndex
     {
         [Key]
-        [IsFilterable, IsSearchable, IsRetrievable(true)]
-        public string Title { get; set; }
-
         [IsRetrievable(true)]
         public string Id { get; set; }
+
+        [IsFilterable, IsSearchable, IsRetrievable(true)]
+        public string Title { get; set; }
 
         [IsFilterable, IsSearchable, IsRetrievable(true)]
         public string Content { get; set; }
